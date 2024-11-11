@@ -1,0 +1,17 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+
+  "files.insertFinalNewline": true,
+
+  "C_Cpp.default.includePath": ["${workspaceFolder}/include", "${workspaceFolder}/build/**"],
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, BreakStringLiterals: false, ColumnLimit: 120, ContinuationIndentWidth: 2 }",
+
+  "prettier.printWidth": 120,
+
+  "[c][cpp]": {
+    "editor.codeActionsOnSave": { "source.fixAll": "explicit", "source.organizeImports": "explicit" },
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  }
+}

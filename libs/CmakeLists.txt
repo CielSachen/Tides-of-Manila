@@ -1,0 +1,28 @@
+add_library(console console.c)
+target_include_directories(console PUBLIC ${HEADER_DIR})
+target_compile_options(console PRIVATE ${C_FLAGS})
+target_compile_features(console PRIVATE ${C_STD})
+
+add_library(prompts prompts.c console.c trading.c)
+target_include_directories(prompts PUBLIC ${HEADER_DIR})
+target_link_libraries(prompts PUBLIC trading PUBLIC console)
+target_compile_options(prompts PRIVATE ${C_FLAGS})
+target_compile_features(prompts PRIVATE ${C_STD})
+
+add_library(text_graphics text_graphics.c console.c prompts.c trading.c)
+target_include_directories(text_graphics PUBLIC ${HEADER_DIR})
+target_link_libraries(text_graphics PUBLIC trading PUBLIC console)
+target_compile_options(text_graphics PRIVATE ${C_FLAGS})
+target_compile_features(text_graphics PRIVATE ${C_STD})
+
+add_library(trading trading.c)
+target_include_directories(trading PUBLIC ${HEADER_DIR})
+target_link_libraries(trading PUBLIC text_graphics)
+target_compile_options(trading PRIVATE ${C_FLAGS})
+target_compile_features(trading PRIVATE ${C_STD})
+
+add_library(weather weather.c)
+target_include_directories(weather PUBLIC ${HEADER_DIR})
+target_link_libraries(weather PUBLIC text_graphics)
+target_compile_options(weather PRIVATE ${C_FLAGS})
+target_compile_features(weather PRIVATE ${C_STD})

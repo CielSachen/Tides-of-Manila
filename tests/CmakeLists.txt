@@ -1,0 +1,37 @@
+include(GoogleTest)
+
+add_executable(console_test console_test.cpp)
+target_include_directories(console_test PUBLIC ${HEADER_DIR})
+target_link_libraries(console_test PUBLIC GTest::gtest_main PUBLIC console)
+target_compile_options(console_test PRIVATE ${CXX_FLAGS})
+target_compile_features(console_test PRIVATE ${CXX_STD})
+
+gtest_discover_tests(console_test)
+
+add_executable(prompts_test prompts_test.cpp)
+target_include_directories(prompts_test PUBLIC ${HEADER_DIR})
+target_link_libraries(prompts_test PUBLIC GTest::gtest_main PUBLIC prompts)
+target_compile_options(prompts_test PRIVATE ${CXX_FLAGS})
+target_compile_features(prompts_test PRIVATE ${CXX_STD})
+
+add_custom_target(prompts_test_mocks COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/mocks
+                  ${CMAKE_CURRENT_BINARY_DIR}/mocks)
+add_dependencies(prompts_test prompts_test_mocks)
+
+gtest_discover_tests(prompts_test)
+
+add_executable(trading_test trading_test.cpp)
+target_include_directories(trading_test PUBLIC ${HEADER_DIR})
+target_link_libraries(trading_test PUBLIC GTest::gtest_main PUBLIC trading)
+target_compile_options(trading_test PRIVATE ${CXX_FLAGS})
+target_compile_features(trading_test PRIVATE ${CXX_STD})
+
+gtest_discover_tests(trading_test)
+
+add_executable(weather_test weather_test.cpp)
+target_include_directories(weather_test PUBLIC ${HEADER_DIR})
+target_link_libraries(weather_test PUBLIC GTest::gtest_main PUBLIC weather)
+target_compile_options(weather_test PRIVATE ${CXX_FLAGS})
+target_compile_features(weather_test PRIVATE ${CXX_STD})
+
+gtest_discover_tests(weather_test)
