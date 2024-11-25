@@ -1,4 +1,4 @@
-/**
+/*
  * Tides of Manila: A Merchant's Quest is a turn-based CLI-based game.
  * Copyright (C) 2024  Louis Raphael V. Panaligan
  *

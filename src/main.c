@@ -1,4 +1,4 @@
-/**
+/*
  * Tides of Manila: A Merchant's Quest is a turn-based CLI-based game.
  * Copyright (C) 2024  Louis Raphael V. Panaligan
  *
@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-/**
+/*
  * This is to certify that this project is my own work, based on my personal efforts in studying
  * and applying the concepts learned. I have constructed the functions and their respective
  * algorithms and corresponding code by myself. The program was run, tested, and debugged by
@@ -26,7 +26,7 @@
  *                                   Louis Raphael V. Panaligan, DLSU ID# 12413372
  */
 
-/**
+/*
  * Description: My Logic Formulation and Introductory Programming (CCPROG1) machine project.
  * Programmed by: Louis Raphael V. Panaligan
  * Last modified: 2024-11-24
