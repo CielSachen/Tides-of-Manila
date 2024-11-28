@@ -279,13 +279,13 @@ int main(void) {
         if (nStormTurnDuration == 0) {
           // Provide the player with a 1 day buffer period.
           nStormTurnDuration--;
-        } else if (!bIsNewStorm && (nStormWindSignalNumber < 5 || nStormTurnDuration > (nStormTurnDuration / 2))) {
+        } else if (!bIsNewStorm && (nStormWindSignalNumber < 5)) {
           int bAdjustStormStrength = generateRandomBool(50);
 
           if (bAdjustStormStrength) {
             int nStormNewWindSignalNumber;
 
-            if (nStormWindSignalNumber < 5 && nStormTurnDuration <= (nStormTurnDuration / 2)) {
+            if (nStormWindSignalNumber < 5) {
               nStormNewWindSignalNumber = nStormWindSignalNumber + 1;
             } else {
               nStormNewWindSignalNumber = nStormWindSignalNumber - 1;
