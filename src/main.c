@@ -163,9 +163,9 @@ int main(void) {
           printf("\n");
 
           int nCargoAmount = promptPlayerForCargoAmount(
-            cChosenActionId, nShipCargoLimit, cChosenCargoId, nPlayerBalance, nCoconutMarketPrice, nRiceMarketPrice,
-            nSilkMarketPrice, nGunMarketPrice, nShipCoconutCargoAmount, nShipRiceCargoAmount, nShipSilkCargoAmount,
-            nShipGunCargoAmount);
+            cChosenActionId, nShipCargoLimit - nShipTotalCargoAmount, cChosenCargoId, nPlayerBalance,
+            nCoconutMarketPrice, nRiceMarketPrice, nSilkMarketPrice, nGunMarketPrice, nShipCoconutCargoAmount,
+            nShipRiceCargoAmount, nShipSilkCargoAmount, nShipGunCargoAmount);
 
           printf("\n");
 
